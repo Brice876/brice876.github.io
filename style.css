@@ -1,0 +1,19 @@
+/* Base styles for the telephone input */
+input[type="tel"] {
+  padding: 8px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s ease; /* Smooth transition when validation triggers */
+}
+
+/* Applies a green border ONLY when the input satisfies the validation criteria */
+input[type="tel"]:valid {
+  border-color: #1fab59; /* Green color */
+}
+
+/* Optional: Applies a red border if the user inputs an invalid format */
+input[type="tel"]:invalid:not(:placeholder-shown) {
+  border-color: #e74c3c; /* Red color */
+}
